@@ -190,7 +190,7 @@ def user_stats(df):
       gender_types = df['Gender'].value_counts()
       print('\nGender types:\n', gender_types)
     except KeyError:
-      print("\nGender types:\nNo data available for this month.")
+      print("\nNo data available for this month.")
 
     # TO DO: Display earliest, most recent, and most common year of birth
 
@@ -198,19 +198,19 @@ def user_stats(df):
       Earliest_Year = df['Birth Year'].min()
       print('\nEarliest year:', Earliest_Year)
     except KeyError:
-      print("\nEarliest year:\nNo data available for this month.")
+      print("\nNo data available for this month.")
 
     try:
       Most_Recent_Year = df['Birth Year'].max()
       print('\nMost recent year:', Most_Recent_Year)
     except KeyError:
-      print("\nMost recent year:\nNo data available for this month.")
+      print("\nNo data available for this month.")
 
     try:
       Most_Common_Year = df['Birth Year'].value_counts().idxmax()
       print('\nMost common year:', Most_Common_Year)
     except KeyError:
-      print("\nMost common year:\nNo data available for this month.")
+      print("\nNo data available for this month.")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
